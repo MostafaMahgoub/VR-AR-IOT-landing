@@ -1,0 +1,463 @@
+{
+  "home": {
+    "title": "الرئيسية"
+  },
+  "header": {
+    "logo": {
+      "alt": "GasTech"
+    },
+    "nav": {
+      "units": "System Units",
+      "about": "About",
+      "standards": "Ministry Standards",
+      "whyUs": "Why Us",
+      "packages": "Packages",
+      "whyCompany": "Why Choose Us",
+      "partners": "Our Partners",
+      "contact": "Contact Us"
+    },
+    "cta": {
+      "requestConsultation": "Contact Us"
+    }
+  },
+  "hero": {
+    "title": "VR–AR Integrated System",
+    "subtitle": "Experience the Future of Interaction",
+    "description": "Our VR–AR system combines cutting-edge technologies to create immersive, interactive, and realistic experiences for education, training, entertainment, and business. It bridges the gap between the physical and digital worlds, empowering users with limitless possibilities.",
+    "features": {
+      "title": "Main System Features",
+      "remoteControl": "Real-time interaction",
+      "integration": "Enhanced learning and training",
+      "energyStandards": "Increased engagement and creativity",
+      "taxCompliance": "Flexible applications across industries"
+    },
+    "cta": {
+      "requestConsultation": "Contact Us"
+    },
+    "download": {
+      "button": "Download Company Profile",
+      "loading": "Downloading...",
+      "error": "An error occurred while downloading the file. Please try again."
+    },
+    "image": {
+      "alt": "GasTech System"
+    }
+  },
+  "about": {
+    "title": "About Be Tech",
+    "paragraph1": {
+      "brand": "(Be Tech بي تك)",
+      "content": "At Be Tech, we are a dynamic technology company specializing in comprehensive software development solutions. Our expertise spans across a wide range of services, including website development, Customer Relationship Management (CRM), Enterprise Resource Planning (ERP), Geographic Information Systems (GIS), and Human Resources Management Systems (HRMS). We also excel in SaaS solutions, eCommerce projects, and mobile app development, providing tailored customization services to bring unique client ideas to life."
+    },
+    "paragraph2": {
+      "prefix": "Provides",
+      "brand": "(Be Tech بي تك)",
+      "content": "With extensive experience in both the B2G (Business to Government) and B2B (Business to Business) sectors, Be Tech has successfully executed numerous large-scale projects in Saudi Arabia, the Emirates, and Egypt. In addition to software development, we are heavily involved in government tenders, implementing digital infrastructure through hardware and network solutions."
+    },
+    "paragraph3": {
+      "prefix": "Designed",
+      "brand": "(Be Tech بي تك)",
+      "content": "In addition to our core software and infrastructure offerings, Be Tech provides robust cybersecurity services. Our cybersecurity solutions are designed to safeguard your digital assets from ever-evolving threats, ensuring that data integrity, confidentiality, and availability are maintained at all times."
+    },
+    "paragraph4": {
+      "brand": "(Be Tech بي تك)",
+      "content": "Our highly skilled team is proficient in a variety of programming languages, ensuring we deliver innovative and effective solutions that meet our clients' specific needs."
+    },
+    "toggle": {
+      "show": "Show More",
+      "hide": "Hide Details"
+    },
+    "badges": {
+      "energyStandards": "Compliant with Ministry of Energy Standards",
+      "aiSupported": "AI Supported"
+    },
+    "features": {
+      "comprehensiveAutomation": "Comprehensive Automation",
+      "directIntegration": "Direct Integration",
+      "highSecurity": "High Security",
+      "timeSaving": "Time Saving"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "paragraph1": {
+      "prefix": "We are",
+      "brand": "Be Tech",
+      "content": "create immersive and realistic experiences using the latest virtual reality technologies. Our mission is to create applications that transport you to virtual worlds that provide impactful and engaging experiences for your audience. Whatever your industry, we will leverage virtual reality and utilize this technology in ways that exceed your expectations."
+    },
+    "paragraph2": {
+      "content": "deliver augmented reality experiences that seamlessly integrate digital content with the real world. We develop interactive applications that enhance perception and make interacting with the environment more engaging. Through advanced technologies, we transform the way you see and interact with the world around you.",
+      "brand": "Be Tech",
+      "suffix": "application benefits from advanced technology that makes their operations smoother, more accurate, and more efficient."
+    },
+    "paragraph3": "We leverage virtual reality and augmented reality to create realistic training and simulation environments that enhance your skills. Through immersive experiences in a safe and controlled environment, you can practice and improve your various skills.",
+    "cards": {
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "We always seek new ways to improve and develop our technologies to meet the changing market needs."
+      },
+      "quality": {
+        "title": "High Quality",
+        "description": "All our products and services are designed and manufactured according to the highest quality standards to ensure optimal performance."
+      },
+      "partnership": {
+        "title": "Effective Partnership",
+        "description": "We consider every client a partner in success, and we work to build long-term relationships based on mutual trust."
+      }
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why GasTech",
+    "subtitle": "Features that make us the optimal choice for fuel stations",
+    "toggle": {
+      "show": "Show More",
+      "hide": "Hide Details"
+    },
+    "features": {
+      "zatca": {
+        "title": "Integrated with Zakat, Tax and Customs Authority (ZATCA)",
+        "desc": "Full compliance with e-invoicing requirements"
+      },
+      "centralIntegration": {
+        "title": "Central Electronic Integration and Remote Control",
+        "desc": "Manage all stations from one location"
+      },
+      "energyStandards": {
+        "title": "Compliant with Ministry of Energy Standards",
+        "desc": "Meets all government requirements for station qualification"
+      },
+      "posIntegration": {
+        "title": "POS Invoice Integration with Pumps",
+        "desc": "Automatic and integrated invoice issuance"
+      },
+      "tankMeasurement": {
+        "title": "Automatic Tank Measurement",
+        "desc": "Real-time fuel level monitoring and inventory management"
+      },
+      "priceUpdate": {
+        "title": "Real-time Fuel Price Updates",
+        "desc": "Instant price updates in pumps and displays"
+      },
+      "selfService": {
+        "title": "Self-Service Implementation in Multiple Ways",
+        "desc": "Customer service through multiple channels (self/app-based)"
+      },
+      "dataStorage": {
+        "title": "Data Storage and System Stability",
+        "desc": "Continuous operation even with internet interruption"
+      },
+      "shiftClosure": {
+        "title": "Fast Shift Closure",
+        "desc": "Complete closure tasks in minimal time"
+      },
+      "customerLoyalty": {
+        "title": "Increased Customer Loyalty",
+        "desc": "Offers and features that enhance customer experience"
+      },
+      "erpSystem": {
+        "title": "Integrated ERP System",
+        "desc": "Integration between HR, Finance, and Operations"
+      },
+      "digitalTransformation": {
+        "title": "Process Automation and Digital Transformation",
+        "desc": "Digitalization of operations for efficiency"
+      },
+      "maintenanceAlerts": {
+        "title": "Maintenance and Fault Alerts",
+        "desc": "Automatic alerts for equipment status"
+      },
+      "waterTemperature": {
+        "title": "Water Percentage and Temperature Monitoring",
+        "desc": "Precise control of tank conditions"
+      },
+      "tankCalculation": {
+        "title": "Automatic Tank Measurement Calculation",
+        "desc": "Automatic volume calculation without human intervention"
+      },
+      "systemIntegration": {
+        "title": "Integration with Other Systems",
+        "desc": "Connection with government and internal systems"
+      },
+      "driverFuelMonitoring": {
+        "title": "Driver Fuel Consumption Monitoring",
+        "desc": "Track and analyze fuel consumption"
+      },
+      "transportManagement": {
+        "title": "Transport and Fuel Request Management",
+        "desc": "Organize transport operations and supply requests"
+      }
+    }
+  },
+  "consultationForm": {
+    "title": "Contact Us",
+    "subtitle": "Contact us to get a free consultation and a custom offer for your station",
+    "description": "Fill out the form and we'll contact you within 24 hours",
+    "validation": {
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number must be at least 10 digits",
+      "emailInvalid": "Invalid email address"
+    },
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your full name"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "05xxxxxxxx"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@domain.com"
+      },
+      "position": {
+        "label": "Position",
+        "placeholder": "Manager, Owner, Supervisor..."
+      },
+      "companyName": {
+        "label": "Company Name",
+        "placeholder": "Company name"
+      },
+      "stationsCount": {
+        "label": "Number of Stations",
+        "placeholder": "Number of stations"
+      },
+      "pumpsPerStation": {
+        "label": "Number of Pumps",
+        "placeholder": "Number of pumps"
+      },
+      "nozzlesPerPump": {
+        "label": "Number of Nozzles",
+        "placeholder": "Number of nozzles"
+      },
+      "tanksCount": {
+        "label": "Number of Tanks",
+        "placeholder": "Number of tanks"
+      },
+      "wantDemo": {
+        "label": "Would you like to attend a demo?",
+        "placeholder": "Choose appropriate option",
+        "options": {
+          "yes": "Yes",
+          "no": "No",
+          "maybe": "Maybe later"
+        }
+      },
+      "message": {
+        "label": "Leave your message",
+        "placeholder": "Your message or inquiry..."
+      }
+    },
+    "submit": {
+      "button": "Submit",
+      "loading": "Sending..."
+    },
+    "success": {
+      "title": "Your request has been sent successfully!",
+      "description": "We will contact you within 24 hours to schedule your free consultation"
+    },
+    "errors": {
+      "submissionError": {
+        "title": "Submission Error",
+        "description": "An error occurred while sending the form. Please try again."
+      },
+      "sendFailed": {
+        "title": "Send Failed",
+        "description": "Unable to send request. Please try again."
+      }
+    }
+  },
+  "ministryStandards": {
+    "title": "Ministry of Energy Standards and Requirements",
+    "subtitle": "For qualifying fuel stations and ensuring quality and operational efficiency",
+    "badge": "Ministry of Energy",
+    "systemTitle": "GasTech System",
+    "description": {
+      "prefix": "The GasTech system is distinguished by its compliance with the following standards, which the Ministry of Energy requires to be available for the facility to be qualified to manage fuel stations:",
+      "brand": "GasTech",
+      "content": "system is distinguished by its compliance with the following standards, which the Ministry of Energy requires to be available for the facility to be qualified to manage fuel stations:"
+    },
+    "toggle": {
+      "show": "Show More",
+      "hide": "Hide Details"
+    },
+    "standards": {
+      "electronicIntegration": "Establishing a central electronic integration system responsible for taking pump readings, knowing the quantities of fuel sold from each pump, and controlling the instant and remote change of energy product prices in pumps and external screens for displaying energy product prices in fuel stations affiliated with the facility (Forecourt Controller).",
+      "centralLinking": "Commitment to the unified central linking of all systems that require linking by the concerned authorities, such as modifying prices on pumps and price screens instantly remotely, and other systems.",
+      "fuelMonitoring": "Establishing an automated system for monitoring fuel in tanks through the use of an automatic tank gauge (ATG) that allows real-time remote inventory monitoring.",
+      "transportManagement": "Establishing a transport management system (System Management Transportation) that manages fuel requests from the time of request to unloading the product in station tanks.",
+      "erpSystem": "Providing an Enterprise Resource Planning (ERP) system for human resources and retail sales, automatically covering all systems including fuel and non-fuel operations in general, linking point-of-sale systems, various payment systems, cash, electronic payment system, pumps, automated tank reading system, and others.",
+      "cloudBased": "All communications between automation systems, software, and other devices should be cloud-based.",
+      "mobileApps": "Mobile applications (Apple and Android) including information about the facility such as products offered, prices, station locations, working hours, offers, and customer complaints."
+    },
+    "cards": {
+      "compliance": {
+        "title": "Full Compliance",
+        "description": "The GasTech system is fully compatible with all Ministry of Energy standards and requirements for qualifying fuel stations"
+      },
+      "updates": {
+        "title": "Continuous Updates",
+        "description": "Our system is designed to be prepared for any additional developments and keep pace with the latest technologies"
+      }
+    },
+    "supportedStandards": {
+      "title": "Supported Standards and Requirements",
+      "badge": "100% Compatible with Ministry of Energy Standards",
+      "items": {
+        "electronicIntegration": "Central Electronic Integration",
+        "pumpReadings": "Pump Readings",
+        "fuelPriceChange": "Fuel Price Changes",
+        "tankMonitoring": "Tank Monitoring",
+        "transportManagement": "Transport Management",
+        "retailSales": "Retail Sales",
+        "paymentManagement": "Payment Management",
+        "maintenanceManagement": "Maintenance and Fault Management",
+        "customerLoyalty": "Customer Loyalty Programs",
+        "mobileApps": "Mobile Applications",
+        "selfService": "Self-Service",
+        "electronicInvoicing": "Electronic Invoicing",
+        "hrManagement": "Human Resources Management",
+        "resourcePlanning": "Resource Planning Systems"
+      }
+    }
+  },
+  "partners": {
+    "title": "Success Partners"
+  },
+  "featuresGrid": {
+    "title": "System Modules",
+    "subtitle": "A complete and integrated system for managing all aspects of VR–AR applications",
+    "features": {
+      "stationManagement": {
+        "title": "Immersive Training",
+        "desc": "Simulations for education and workforce training"
+      },
+      "pumpManagement": {
+        "title": "Virtual Collaboration",
+        "desc": "Meetings and teamwork in shared VR/AR environments"
+      },
+      "tankManagement": {
+        "title": "3D Content Management",
+        "desc": "Manage and deploy immersive 3D/AR assets"
+      },
+      "transportManagement": {
+        "title": "Interactive Simulations",
+        "desc": "Realistic real-time scenarios for industries"
+      },
+      "priceManagement": {
+        "title": "Analytics & Insights",
+        "desc": "Track usage, performance, and learning outcomes"
+      },
+      "displayManagement": {
+        "title": "Hardware Integration",
+        "desc": "Support for headsets, sensors, and devices"
+      },
+      "maintenanceManagement": {
+        "title": "Custom Environments",
+        "desc": "Create tailored VR–AR spaces for business needs"
+      },
+      "humanResources": {
+        "title": "Support & Maintenance",
+        "desc": "Continuous system updates and assistance"
+      },
+      "selfService": {
+        "title": "Self-Service",
+        "desc": "Mobile apps and self-service"
+      },
+      "accounting": {
+        "title": "Accounting & Finance",
+        "desc": "Integrated accounting system"
+      },
+      "inventoryManagement": {
+        "title": "Inventory Management",
+        "desc": "Purchases and inventory management"
+      },
+      "salesManagement": {
+        "title": "Sales Management",
+        "desc": "Point of sale and sales reports"
+      }
+    }
+  },
+  "packages": {
+    "title": "GasTech Packages",
+    "subtitle": "Choose the package that suits your station's needs",
+    "popularBadge": "Most Popular",
+    "requestPackage": "Request This Package",
+    "core": {
+      "name": "Gas-Tech Core",
+      "features": {
+        "stationSales": "Station Sales Management",
+        "stationInventory": "Station Inventory Management",
+        "stationTanks": "Station Tank Management",
+        "pumpsDisplays": "Pump and External Display Management",
+        "purchases": "Purchase Management",
+        "energyPrices": "Energy Product Price Management",
+        "shifts": "Shift Management",
+        "facilityRentals": "Facility Rental and Installment Management",
+        "posApp": "POS App for Payment Machines",
+        "reports": "Reports"
+      },
+      "notIncluded": {
+        "generalAccounting": "General Accounting System",
+        "humanResources": "Human Resources System",
+        "transport": "Transport System",
+        "maintenance": "Maintenance System"
+      }
+    },
+    "plus": {
+      "name": "Gas-Tech Plus",
+      "features": {
+        "allCoreFeatures": "All Core Package Features",
+        "generalAccounting": "General Accounting System",
+        "humanResources": "Human Resources System",
+        "maintenanceContract": "Annual Maintenance Contract - First Year"
+      },
+      "notIncluded": {
+        "transport": "Transport System",
+        "maintenance": "Maintenance System",
+        "thirdPartyIntegration": "Third-Party Integration Services"
+      }
+    },
+    "extra": {
+      "name": "Gas-Tech Extra",
+      "features": {
+        "allPreviousFeatures": "All Previous Package Features",
+        "transport": "Transport System",
+        "maintenance": "Maintenance System",
+        "thirdPartyIntegration": "Third-Party Integration Services",
+        "maintenanceContract": "Annual Maintenance Contract - First Year"
+      }
+    }
+  },
+  "footer": {
+    "logo": {
+      "alt": "GasTech"
+    },
+    "description": "GasTech system for managing and automating fuel station procedures and enterprise resource planning",
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About",
+      "standards": "Ministry of Energy Standards",
+      "whyUs": "Why Us",
+      "whyCompany": "Why Choose Us",
+      "packages": "Packages",
+      "partners": "Success Partners"
+    },
+    "services": {
+      "title": "Services",
+      "deviceSupply": "Immersive 3D environments",
+      "training": "Real-time interaction",
+      "systemCreation": "Enhanced learning and training",
+      "softwareDevelopment": "Increased engagement and creativity",
+      "technicalConsultation": "Flexible applications across industries"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": "Riyadh - Wadi Hajar Street - Al Malqa District - 13524",
+      "whatsapp": "Contact via WhatsApp"
+    },
+    "copyright": {
+      "text": "All rights reserved Be Tech, powered by"
+    }
+  }
+}
