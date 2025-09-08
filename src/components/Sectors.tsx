@@ -84,7 +84,7 @@ export default function Sectors() {
   ];
 
   return (
-    <section className="py-16" id="units">
+    <section className="py-16" id="sectors">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">{t("title")}</h2>

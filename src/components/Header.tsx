@@ -39,7 +39,7 @@ export default function Header() {
   useEffect(() => {
     const sections = [
       "hero",
-      "units",
+      "sectors",
       "about",
       "standards",
       "why-us",
@@ -89,7 +89,7 @@ export default function Header() {
   };
 
   const navItems = [
-    { id: "units", label: t("nav.units") },
+    { id: "sectors", label: t("nav.sectors") },
     { id: "about", label: t("nav.about") },
     { id: "why-company", label: t("nav.whyCompany") },
     { id: "footer", label: t("nav.contact") },
