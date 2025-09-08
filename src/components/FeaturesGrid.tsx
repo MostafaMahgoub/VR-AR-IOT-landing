@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 function cn(...classes: (string | undefined | false | null)[]): string {
   return classes.filter(Boolean).join(" ");
@@ -44,49 +43,41 @@ export default function FeaturesGrid() {
       icon: GraduationCap,
       title: t("features.stationManagement.title"),
       desc: t("features.stationManagement.desc"),
-      href: "https://drive.google.com/file/d/1DMvIp59auOuzUQj6X7U8UFk3ieVfPzOq/view?usp=sharing",
     },
     {
       icon: Users,
       title: t("features.pumpManagement.title"),
       desc: t("features.pumpManagement.desc"),
-      href: "https://drive.google.com/file/d/1G-hLGQnMEsSKtTe6XSqmOCZt4cOhLEAe/view?usp=sharing",
     },
     {
       icon: Box,
       title: t("features.tankManagement.title"),
       desc: t("features.tankManagement.desc"),
-      href: "https://drive.google.com/file/d/1M67ty2OdbsqwKM131LiiUnq8N8ZtVG2P/view?usp=sharing",
     },
     {
       icon: PlayCircle,
       title: t("features.transportManagement.title"),
       desc: t("features.transportManagement.desc"),
-      href: "https://drive.google.com/file/d/1-v8DVvnSiv04dc-oo-Rg1St7F5pJhUFJ/view?usp=sharing",
     },
     {
       icon: BarChart3,
       title: t("features.priceManagement.title"),
       desc: t("features.priceManagement.desc"),
-      href: "https://drive.google.com/file/d/1qvB3Rv1yOUxdIJ1VwzwIsVWQn_ZtYDSA/view?usp=sharing",
     },
     {
       icon: Cpu,
       title: t("features.displayManagement.title"),
       desc: t("features.displayManagement.desc"),
-      href: "https://drive.google.com/file/d/1_1g0ESyrtkFX6FdT4pH8TZavWTIM-2aG/view?usp=sharing",
     },
     {
       icon: Layers,
       title: t("features.maintenanceManagement.title"),
       desc: t("features.maintenanceManagement.desc"),
-      href: "https://drive.google.com/file/d/1-v8DVvnSiv04dc-oo-Rg1St7F5pJhUFJ/view?usp=sharing",
     },
     {
       icon: LifeBuoy,
       title: t("features.humanResources.title"),
       desc: t("features.humanResources.desc"),
-      href: "https://drive.google.com/file/d/1DMvIp59auOuzUQj6X7U8UFk3ieVfPzOq/view?usp=sharing",
     },
     // {
     //   icon: Smartphone,
@@ -127,27 +118,21 @@ export default function FeaturesGrid() {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={item}>
-              <Link
-                href={feature.href}
-                target="_blank"
-                className="hover:cursor-pointer"
+              <Card
+                className={cn(
+                  "transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl border-0 shadow-md hover:bg-white group h-48"
+                )}
               >
-                <Card
-                  className={cn(
-                    "transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl border-0 shadow-md hover:bg-white group h-48"
-                  )}
-                >
-                  <CardContent className="p-6 text-center">
-                    <feature.icon className="w-12 h-12 text-[#f3822c] mx-auto mb-4 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#d66f25]" />
-                    <h4 className="font-bold text-lg mb-2 transition-colors duration-300 group-hover:text-[#0d0d0d]">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
-                      {feature.desc}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
+                <CardContent className="p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-[#f3822c] mx-auto mb-4 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#d66f25]" />
+                  <h4 className="font-bold text-lg mb-2 transition-colors duration-300 group-hover:text-[#0d0d0d]">
+                    {feature.title}
+                  </h4>
+                  <p className="text-gray-600 text-sm transition-colors duration-300 group-hover:text-gray-700">
+                    {feature.desc}
+                  </p>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>
