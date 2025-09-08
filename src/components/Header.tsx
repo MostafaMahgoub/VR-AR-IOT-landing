@@ -7,6 +7,7 @@ import { Menu, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/navigations";
+import logo from "/public/be-tech.svg";
 
 export default function Header() {
   const t = useTranslations("header");
@@ -110,7 +111,7 @@ export default function Header() {
             className="cursor-pointer"
           >
             <Image
-              src="/be-tech.svg"
+              src={logo}
               alt={t("logo.alt")}
               width={120}
               height={40}
