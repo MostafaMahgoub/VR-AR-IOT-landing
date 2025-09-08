@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "motion/react";
-import logo from "/public/be-tech.svg";
+import logo from "../../public/be-tech.svg";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 

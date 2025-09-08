@@ -7,8 +7,7 @@ import { Menu, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/navigations";
-import logo from "/public/be-tech.svg";
-
+import logo from "../../public/be-tech.svg";
 export default function Header() {
   const t = useTranslations("header");
   const [activeSection, setActiveSection] = useState("");
