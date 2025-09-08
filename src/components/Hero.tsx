@@ -199,7 +199,9 @@ export default function HeroWithFloatingImage() {
 
               <h2
                 className={`text-[#f3822c] font-bold ${
-                  locale === "en" ? "text-4xl" : "text-4xl md:text-5xl"
+                  locale === "en"
+                    ? "text-4xl"
+                    : "text-4xl md:text-5xl !leading-[4rem]"
                 }`}
               >
                 {t("subtitle")}
