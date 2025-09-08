@@ -33,9 +33,13 @@ import {
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
-export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () => void }) {
+export default function MergedConsultationForm({
+  onSuccess,
+}: {
+  onSuccess?: () => void;
+}) {
   const t = useTranslations("consultationForm");
-  
+
   const mergedSchema = z.object({
     name: z.string().min(2, t("validation.nameRequired")),
     phone: z.string().min(10, t("validation.phoneRequired")),
@@ -46,7 +50,7 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
     pumpsPerStation: z.string().optional(),
     nozzlesPerPump: z.string().optional(),
     tanksCount: z.string().optional(),
-    wantDemo: z.string().optional(),
+    serviceProvided: z.string().min(1, t("validation.serviceRequired")),
     message: z.string().optional(),
   });
 
@@ -67,7 +71,7 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
       pumpsPerStation: "",
       nozzlesPerPump: "",
       tanksCount: "",
-      wantDemo: "",
+      serviceProvided: "",
       message: "",
     },
   });
@@ -99,7 +103,8 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
     } catch (error) {
       console.error("Failed to send:", error);
       toast.error(t("errors.sendFailed.title"), {
-        description: (error as Error).message || t("errors.sendFailed.description"),
+        description:
+          (error as Error).message || t("errors.sendFailed.description"),
       });
     } finally {
       setIsSubmitting(false);
@@ -114,9 +119,7 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
           <h3 className="text-2xl font-bold text-green-600 mb-2">
             {t("success.title")}
           </h3>
-          <p className="text-gray-600">
-            {t("success.description")}
-          </p>
+          <p className="text-gray-600">{t("success.description")}</p>
         </CardContent>
       </Card>
     );
@@ -283,10 +286,10 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
               /> */}
               <FormField
                 control={form.control}
-                name="wantDemo"
+                name="serviceProvided"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("fields.wantDemo.label")}</FormLabel>
+                    <FormLabel>{t("fields.serviceProvided.label")} *</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
@@ -294,19 +297,21 @@ export default function MergedConsultationForm({ onSuccess }: { onSuccess?: () =
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue
-                            placeholder={t("fields.wantDemo.placeholder")}
+                            placeholder={t(
+                              "fields.serviceProvided.placeholder"
+                            )}
                           />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="yes">
-                          {t("fields.wantDemo.options.yes")}
+                        <SelectItem value="vr-ar">
+                          {t("fields.serviceProvided.options.vr-ar")}
                         </SelectItem>
-                        <SelectItem value="no">
-                          {t("fields.wantDemo.options.no")}
+                        <SelectItem value="ai-iot">
+                          {t("fields.serviceProvided.options.ai-iot")}
                         </SelectItem>
-                        <SelectItem value="maybe">
-                          {t("fields.wantDemo.options.maybe")}
+                        <SelectItem value="fuel-automation">
+                          {t("fields.serviceProvided.options.fuel-automation")}
                         </SelectItem>
                       </SelectContent>
                     </Select>

@@ -30,12 +30,39 @@ interface ConsultationRequestData {
   pumpsPerStation?: string | number;
   nozzlesPerPump?: string | number;
   tanksCount?: string | number;
-  wantDemo?: boolean;
+  serviceProvided?: string;
   message?: string;
 }
 
+function getServiceLabel(
+  serviceValue: string | undefined,
+  language: "en" | "ar"
+): string {
+  if (!serviceValue) return language === "en" ? "Not specified" : "غير محدد";
+
+  const serviceLabels = {
+    "vr-ar": {
+      en: "Virtual Reality & Augmented Reality (VR & AR)",
+      ar: "الواقع الافتراضي والمعزز (VR & AR)",
+    },
+    "ai-iot": {
+      en: "Artificial Intelligence & Internet of Things (AI & IOT)",
+      ar: "الذكاء الاصطناعي وإنترنت الأشياء (AI & IOT)",
+    },
+    "fuel-automation": {
+      en: "Fuel Automation",
+      ar: "أتمتة الوقود",
+    },
+  };
+
+  return (
+    serviceLabels[serviceValue as keyof typeof serviceLabels]?.[language] ||
+    serviceValue
+  );
+}
+
 function generateEmailTemplate(data: ConsultationRequestData) {
-    return `
+  return `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -336,6 +363,10 @@ function generateEmailTemplate(data: ConsultationRequestData) {
                     <div class="info-label">Company Name</div>
                     <div class="info-value">${data.companyName || "Not provided"}</div>
                   </div>
+                  <div class="info-item">
+                    <div class="info-label">Service Provided</div>
+                    <div class="info-value">${getServiceLabel(data.serviceProvided, "en")}</div>
+                  </div>
                 </div>
               </div>
               <div class="language-column arabic">
@@ -344,6 +375,10 @@ function generateEmailTemplate(data: ConsultationRequestData) {
                   <div class="info-item">
                     <div class="info-label">اسم الشركة</div>
                     <div class="info-value">${data.companyName || "غير محدد"}</div>
+                  </div>
+                  <div class="info-item">
+                    <div class="info-label">الخدمة المقدمة</div>
+                    <div class="info-value">${getServiceLabel(data.serviceProvided, "ar")}</div>
                   </div>
                 </div>
               </div>
@@ -401,7 +436,7 @@ function generateEmailTemplate(data: ConsultationRequestData) {
           </div>
           
           ${
-            data.wantDemo
+            data.serviceProvided
               ? `
           <div class="highlight">
             <div class="highlight-text">
@@ -443,15 +478,18 @@ function generateEmailTemplate(data: ConsultationRequestData) {
         <div class="footer">
           <p><strong>GasTech Consultation System | نظام استشارات جاس تك</strong></p>
           <p>This email was automatically generated from your website contact form | تم إنشاء هذا البريد الإلكتروني تلقائياً من نموذج الاتصال في موقعكم</p>
-          <div class="timestamp">Received on ${new Date().toLocaleString("en-US", {
-            timeZone: "Asia/Riyadh",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-            timeZoneName: "short",
-          })} | تم الاستلام في ${new Date().toLocaleDateString("ar-SA", {
+          <div class="timestamp">Received on ${new Date().toLocaleString(
+            "en-US",
+            {
+              timeZone: "Asia/Riyadh",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+              timeZoneName: "short",
+            }
+          )} | تم الاستلام في ${new Date().toLocaleDateString("ar-SA", {
             timeZone: "Asia/Riyadh",
             year: "numeric",
             month: "long",
@@ -461,5 +499,5 @@ function generateEmailTemplate(data: ConsultationRequestData) {
       </div>
     </body>
     </html>
-  `
+  `;
 }

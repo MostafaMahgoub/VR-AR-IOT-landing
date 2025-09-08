@@ -197,7 +197,8 @@
     "validation": {
       "nameRequired": "Name is required",
       "phoneRequired": "Phone number must be at least 10 digits",
-      "emailInvalid": "Invalid email address"
+      "emailInvalid": "Invalid email address",
+      "serviceRequired": "Service selection is required"
     },
     "fields": {
       "name": {
@@ -236,13 +237,13 @@
         "label": "Number of Tanks",
         "placeholder": "Number of tanks"
       },
-      "wantDemo": {
+      "serviceProvided": {
         "label": "Service Provided",
-        "placeholder": "Choose appropriate option",
+        "placeholder": "Select the required service",
         "options": {
-          "yes": "VR & AR",
-          "no": "AI & IOT",
-          "maybe": "Fuel automation"
+          "vr-ar": "Virtual Reality & Augmented Reality (VR & AR)",
+          "ai-iot": "Artificial Intelligence & Internet of Things (AI & IOT)",
+          "fuel-automation": "Fuel Automation"
         }
       },
       "message": {
