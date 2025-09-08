@@ -1,15 +1,9 @@
 "use client";
 
-import {
-  ChevronsDown,
-  ChevronsUp,
-  Clock,
-  Shield,
-  Wifi,
-  Zap,
-} from "lucide-react";
+import { ChevronsDown, ChevronsUp } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 
 const textContainer: Variants = {
@@ -79,7 +73,6 @@ export default function About() {
               variants={textItem}
               className="text-lg text-white mb-6 leading-relaxed"
             >
-              <span className="font-semibold">{t("paragraph1.brand")}</span>{" "}
               {t("paragraph1.content")}
             </motion.p>
 
@@ -87,8 +80,6 @@ export default function About() {
               variants={textItem}
               className="text-lg text-white mb-6 leading-relaxed"
             >
-              {t("paragraph2.prefix")}{" "}
-              <span className="font-semibold">{t("paragraph2.brand")}</span>{" "}
               {t("paragraph2.content")}
             </motion.p>
 
@@ -106,15 +97,62 @@ export default function About() {
               className="overflow-hidden"
             >
               <div className="space-y-6">
-                <p className="text-lg text-white leading-relaxed">
-                  {t("paragraph3.prefix")}{" "}
-                  <span className="font-semibold">{t("paragraph3.brand")}</span>{" "}
-                  {t("paragraph3.content")}
-                </p>
-                <p className="text-lg text-white leading-relaxed">
-                  <span className="font-semibold">{t("paragraph4.brand")}</span>{" "}
-                  {t("paragraph4.content")}
-                </p>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#f3822c] mb-4">
+                    {t("paragraph3.title")}
+                  </h3>
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    {t("paragraph3.subtitle")}
+                  </h4>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                        {t("paragraph3.challenge")}
+                      </h5>
+                      <p className="text-white leading-relaxed">
+                        {t("paragraph3.challengeContent")}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                        {t("paragraph3.solution")}
+                      </h5>
+                      <p className="text-white leading-relaxed">
+                        {t("paragraph3.solutionContent")}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                        {t("paragraph3.impact")}
+                      </h5>
+                      <ul className="space-y-2">
+                        {t
+                          .raw("paragraph3.impactPoints")
+                          .map((point: string, index: number) => (
+                            <li
+                              key={index}
+                              className="text-white leading-relaxed flex items-start"
+                            >
+                              <span className="text-[#f3822c] mr-2">•</span>
+                              {point}
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                        {t("paragraph3.valueAdded")}
+                      </h5>
+                      <p className="text-white leading-relaxed">
+                        {t("paragraph3.valueAddedContent")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
@@ -140,7 +178,7 @@ export default function About() {
             </motion.button>
           </motion.div>
 
-          {/* Right: Feature Cards */}
+          {/* Right: Cement Image */}
           <motion.div
             className="relative"
             variants={cardsContainer}
@@ -148,45 +186,20 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  {
-                    icon: Zap,
-                    title: t("features.comprehensiveAutomation"),
-                    color: "text-blue-600",
-                  },
-                  {
-                    icon: Wifi,
-                    title: t("features.directIntegration"),
-                    color: "text-green-600",
-                  },
-                  {
-                    icon: Shield,
-                    title: t("features.highSecurity"),
-                    color: "text-purple-600",
-                  },
-                  {
-                    icon: Clock,
-                    title: t("features.timeSaving"),
-                    color: "text-orange-600",
-                  },
-                ].map(({ icon: Icon, title, color }, idx) => (
-                  <motion.div
-                    key={idx}
-                    variants={cardItem}
-                    whileHover={{ y: -4, scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="bg-white rounded-lg p-4 text-center shadow-sm"
-                  >
-                    <Icon className={`w-8 h-8 ${color} mx-auto mb-2`} />
-                    <h4 className="font-bold text-sm sm:text-base md:text-lg">
-                      {title}
-                    </h4>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <motion.div
+              variants={cardItem}
+              className={`relative w-full rounded-lg transition-all duration-500 ${
+                showMore ? "h-[550px]" : "h-[300px] lg:h-[450px]"
+              }`}
+            >
+              <Image
+                src="/cement.png"
+                alt="Cement Technology"
+                fill
+                className="w-full h-full rounded-lg"
+                priority
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

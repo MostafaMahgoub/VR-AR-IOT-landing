@@ -44,38 +44,33 @@
     }
   },
   "about": {
-    "title": "About Be Tech",
+    "title": "Augmented Reality in Construction Sector",
     "paragraph1": {
-      "brand": "(Be Tech بي تك)",
-      "content": "At Be Tech, we are a dynamic technology company specializing in comprehensive software development solutions. Our expertise spans across a wide range of services, including website development, Customer Relationship Management (CRM), Enterprise Resource Planning (ERP), Geographic Information Systems (GIS), and Human Resources Management Systems (HRMS). We also excel in SaaS solutions, eCommerce projects, and mobile app development, providing tailored customization services to bring unique client ideas to life."
+      "content": "Augmented Reality is a revolutionary tool in the construction field, enabling engineers and developers to display 3D engineering models directly over real-world terrain, giving work teams and clients a clearer and more accurate view before actual implementation."
     },
     "paragraph2": {
-      "prefix": "Provides",
-      "brand": "(Be Tech بي تك)",
-      "content": "With extensive experience in both the B2G (Business to Government) and B2B (Business to Business) sectors, Be Tech has successfully executed numerous large-scale projects in Saudi Arabia, the Emirates, and Egypt. In addition to software development, we are heavily involved in government tenders, implementing digital infrastructure through hardware and network solutions."
+      "content": "Through this technology, projects and designs can be simulated within a real environment, errors can be detected early, and waste in time and costs can be reduced. It also contributes to facilitating communication between design, implementation, and client teams, and enhances the speed of decision-making and the quality of final results."
     },
     "paragraph3": {
-      "prefix": "Designed",
-      "brand": "(Be Tech بي تك)",
-      "content": "In addition to our core software and infrastructure offerings, Be Tech provides robust cybersecurity services. Our cybersecurity solutions are designed to safeguard your digital assets from ever-evolving threats, ensuring that data integrity, confidentiality, and availability are maintained at all times."
-    },
-    "paragraph4": {
-      "brand": "(Be Tech بي تك)",
-      "content": "Our highly skilled team is proficient in a variety of programming languages, ensuring we deliver innovative and effective solutions that meet our clients' specific needs."
+      "title": "Artificial Intelligence and Internet of Things Services",
+      "subtitle": "Cement Compressive Strength Prediction Service for 28 Days",
+      "challenge": "The Challenge:",
+      "challengeContent": "In the cement and building materials industry, 28-day compressive strength tests are the fundamental standard for determining cement quality and usability. However, these traditional tests take a long time of up to four weeks, leading to delays in production and quality control decisions, negatively affecting project implementation speed and operational efficiency.",
+      "solution": "The Solution:",
+      "solutionContent": "By leveraging artificial intelligence and machine learning technologies, an advanced model is developed capable of instant prediction of expected compressive strength after 28 days. This model relies on analyzing chemical data of cement components immediately after leaving production lines. Instead of waiting for weeks, results can be obtained in just a few minutes.",
+      "impact": "The Impact:",
+      "impactPoints": [
+        "Accelerating Production Decisions: Thanks to instant prediction, cement factories can make necessary adjustments in a timely manner.",
+        "Improving Quality Control: Precise monitoring of final product quality from the early stages of production.",
+        "Reducing Waste and Costs: Early detection of any defects or weaknesses in the mix contributes to reducing losses.",
+        "Enhancing Operational Efficiency: Accelerating production cycles and achieving greater stability in performance."
+      ],
+      "valueAdded": "Added Value:",
+      "valueAddedContent": "This service represents a qualitative leap in the cement industry, as it is not limited to saving time and costs only, but also enhances companies' competitiveness by improving their product quality and ensuring rapid response to market requirements and major construction projects."
     },
     "toggle": {
       "show": "Show More",
       "hide": "Hide Details"
-    },
-    "badges": {
-      "energyStandards": "Compliant with Ministry of Energy Standards",
-      "aiSupported": "AI Supported"
-    },
-    "features": {
-      "comprehensiveAutomation": "Comprehensive Automation",
-      "directIntegration": "Direct Integration",
-      "highSecurity": "High Security",
-      "timeSaving": "Time Saving"
     }
   },
   "whyUs": {
