@@ -111,13 +111,11 @@ export default function FeaturesGrid() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50" id="units">
+    <section className="py-16" id="units">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-xl text-gray-600">{t("subtitle")}</p>
+          <h2 className="text-4xl font-bold text-white mb-4">{t("title")}</h2>
+          <p className="text-xl text-white">{t("subtitle")}</p>
         </div>
 
         <motion.div
@@ -129,7 +127,11 @@ export default function FeaturesGrid() {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={item}>
-              <Link href={feature.href} target="_blank" className="hover:cursor-pointer">
+              <Link
+                href={feature.href}
+                target="_blank"
+                className="hover:cursor-pointer"
+              >
                 <Card
                   className={cn(
                     "transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl border-0 shadow-md hover:bg-white group h-48"

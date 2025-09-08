@@ -48,7 +48,7 @@ export default function WhyUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2
-            className="text-4xl font-bold text-gray-900 mb-4"
+            className="text-4xl font-bold text-white mb-4"
             variants={headerVar}
             initial="hidden"
             whileInView="show"
@@ -67,7 +67,7 @@ export default function WhyUs() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.p
-              className="text-lg text-gray-700 mb-6 leading-relaxed"
+              className="text-lg text-white mb-6 leading-relaxed"
               variants={textItem}
             >
               {t("paragraph1.prefix")}{" "}
@@ -75,7 +75,7 @@ export default function WhyUs() {
               {t("paragraph1.content")}
             </motion.p>
             <motion.p
-              className="text-lg text-gray-700 mb-6 leading-relaxed"
+              className="text-lg text-white mb-6 leading-relaxed"
               variants={textItem}
             >
               {t("paragraph2.content")}{" "}
@@ -83,7 +83,7 @@ export default function WhyUs() {
               {t("paragraph2.suffix")}
             </motion.p>
             <motion.p
-              className="text-lg text-gray-700 mb-8 leading-relaxed"
+              className="text-lg text-white mb-8 leading-relaxed"
               variants={textItem}
             >
               {t("paragraph3")}

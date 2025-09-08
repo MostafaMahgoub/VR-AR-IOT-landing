@@ -1,13 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Download, Loader2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
 import { useState } from "react";
-
-const SplineVR = dynamic(() => import("./SplineVR"), { ssr: false });
+import StarBorder from "./StarBorder";
 
 export default function HeroWithFloatingImage() {
   const t = useTranslations("hero");
@@ -20,7 +18,7 @@ export default function HeroWithFloatingImage() {
       setIsDownloading(true);
       setDownloadError(null);
 
-      const response = await fetch("/Betech Company Profile .pdf");
+      const response = await fetch("/BeTechComp.pdf");
       if (!response.ok) {
         throw new Error("Failed to download the file");
       }
@@ -29,7 +27,7 @@ export default function HeroWithFloatingImage() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "Betech Company Profile .pdf";
+      link.download = "BeTechComp.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -67,8 +65,72 @@ export default function HeroWithFloatingImage() {
       {/* Animated Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Curved Lines */}
-
-        <SplineVR />
+        <svg
+          className="absolute h-full w-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="grad1" x1="1" y1="0" x2="0" y2="0">
+              <stop offset="0%" stopColor="#38BDF8" stopOpacity="0" />
+              <stop offset="50%" stopColor="#EAB308" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#EAB308" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+              <stop offset="0%" stopColor="#1E40AF" stopOpacity="0" />
+              <stop offset="50%" stopColor="#064E3B" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#064E3B" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          {/* Top Curves */}
+          <motion.path
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+              repeatDelay: 1,
+            }}
+            d="M 100 100 Q 300 0 500 100 T 900 100"
+            fill="none"
+            stroke="url(#grad1)"
+            strokeWidth="1"
+          />
+          <motion.path
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+              repeatDelay: 1,
+              delay: 0.5,
+            }}
+            d="M 0 200 Q 200 100 400 200 T 800 200"
+            fill="none"
+            stroke="url(#grad2)"
+            strokeWidth="1"
+          />
+          {/* Bottom Curves */}
+          <motion.path
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+              repeatDelay: 1,
+              delay: 1,
+            }}
+            d="M 100 600 Q 300 500 500 600 T 900 600"
+            fill="none"
+            stroke="url(#grad1)"
+            strokeWidth="1"
+          />
+        </svg>
 
         {/* Straight Lines */}
         <motion.div
@@ -128,15 +190,15 @@ export default function HeroWithFloatingImage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="mx-auto max-w-5xl w-full flex items-center justify-center"
+          className="flex flex-col sm:flex-row items-center gap-0 sm:gap-[10rem]"
         >
           {/* Text content right */}
-          <div className="text-white py-6 xl:py-0 xl:w-[70%]">
+          <div className="text-white py-6 xl:py-0 xl:w-[50%]">
             <div className="flex flex-col gap-6">
               <h1 className={`font-bold text-5xl`}>{t("title")}</h1>
 
               <h2
-                className={`text-yellow-300 font-bold ${
+                className={`text-[#f3822c] font-bold ${
                   locale === "en" ? "text-4xl" : "text-4xl md:text-5xl"
                 }`}
               >
@@ -154,47 +216,25 @@ export default function HeroWithFloatingImage() {
               </p>
             </div>
 
-            {/* <div className="bg-gray-800/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-500 mb-8">
-              <h3
-                className={`font-bold mb-6 ${
-                  locale === "en" ? "text-xl" : "text-2xl"
-                }`}
-              >
-                {t("features.title")}
-              </h3>
-              <div className="space-y-4">
-                {[
-                  t("features.remoteControl"),
-                  t("features.integration"),
-                  t("features.energyStandards"),
-                  t("features.taxCompliance"),
-                ].map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 space-x-reverse"
-                  >
-                    <CheckCircle
-                      size={24}
-                      className="text-yellow-300 w-6 h-6 flex-shrink-0"
-                    />
-                    <span className={"text-sm lg:text-base"}>{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-start">
-              <Button
+            <div className=" flex  gap-2">
+              <StarBorder
+                // variant="solid"
+                radius={9999}
                 size="lg"
-                className={`bg-yellow-500 hover:bg-yellow-400 text-white font-semibold text-sm`}
+                thickness={1}
+                disableGlow
+                speed="2s"
                 onClick={() => scrollToSection("contact")}
               >
                 {t("cta.requestConsultation")}
-              </Button>
-
-              <Button
+              </StarBorder>
+              <StarBorder
+                variant="outline"
+                radius={9999}
                 size="lg"
-                className={`bg-[#0d0d0d]  text-[#f3822c] px-6 py-2 rounded-md font-semibold relative text-sm`}
+                thickness={1}
+                disableGlow
+                speed="2s"
                 onClick={handleDownload}
                 disabled={isDownloading}
               >
@@ -204,7 +244,7 @@ export default function HeroWithFloatingImage() {
                   <Download className="w-4 h-4" />
                 )}
                 {isDownloading ? t("download.loading") : t("download.button")}
-              </Button>
+              </StarBorder>
 
               {downloadError && (
                 <p className="text-red-500 text-sm mt-2">{downloadError}</p>
@@ -213,39 +253,17 @@ export default function HeroWithFloatingImage() {
           </div>
 
           {/* Floating image left */}
-          {/* <div
-            className={`hidden lg:flex relative w-full lg:w-[70%] xl:w-[45%] xl:-me-[165px]`}
+          <div
+            className={`flex relative w-full lg:w-[70%] xl:w-[45%] xl:-me-[165px]`}
           >
-            <div className="relative w-full">
-              <motion.div
-                initial={{ y: 0 }}
-                animate={{ y: [0, -20, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                {locale === "ar" ? (
-                  <Image
-                    src="/en.png"
-                    alt={t("image.alt")}
-                    width={900}
-                    height={900}
-                    className={`w-[75%] 2xl:w-[85%] h-auto object-contain drop-shadow-2xl`}
-                  />
-                ) : (
-                  <Image
-                    src="/ar.png"
-                    alt={t("image.alt")}
-                    width={900}
-                    height={900}
-                    className={`w-[85%] -ms-12 2xl:-ms-0 h-auto object-contain drop-shadow-2xl`}
-                  />
-                )}
-              </motion.div>
-            </div>
-          </div> */}
+            <DotLottieReact
+              src="https://lottie.host/2da28f6d-5857-47e2-90ee-1320adfc2c06/t3EbBi0pHY.lottie"
+              loop
+              autoplay
+              // width={"130%"}
+              style={{ width: "1000px", height: "500px" }}
+            />
+          </div>
         </motion.div>
       </div>
     </section>

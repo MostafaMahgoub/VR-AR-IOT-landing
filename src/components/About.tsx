@@ -1,17 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
 import {
-  Shield,
-  Clock,
-  Zap,
-  Wifi,
   ChevronsDown,
   ChevronsUp,
+  Clock,
+  Shield,
+  Wifi,
+  Zap,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { motion, type Variants } from "motion/react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 const textContainer: Variants = {
   hidden: { opacity: 0, y: 12 },
@@ -59,6 +58,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-16">
+      {/* <AnimatedGradientBG /> */}
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
@@ -70,14 +70,14 @@ export default function About() {
           >
             <motion.h2
               variants={textItem}
-              className="text-4xl font-bold text-gray-900 mb-6"
+              className="text-4xl font-bold text-white mb-6"
             >
               {t("title")}
             </motion.h2>
 
             <motion.p
               variants={textItem}
-              className="text-lg text-gray-700 mb-6 leading-relaxed"
+              className="text-lg text-white mb-6 leading-relaxed"
             >
               <span className="font-semibold">{t("paragraph1.brand")}</span>{" "}
               {t("paragraph1.content")}
@@ -85,7 +85,7 @@ export default function About() {
 
             <motion.p
               variants={textItem}
-              className="text-lg text-gray-700 mb-6 leading-relaxed"
+              className="text-lg text-white mb-6 leading-relaxed"
             >
               {t("paragraph2.prefix")}{" "}
               <span className="font-semibold">{t("paragraph2.brand")}</span>{" "}
@@ -106,12 +106,12 @@ export default function About() {
               className="overflow-hidden"
             >
               <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white leading-relaxed">
                   {t("paragraph3.prefix")}{" "}
                   <span className="font-semibold">{t("paragraph3.brand")}</span>{" "}
                   {t("paragraph3.content")}
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white leading-relaxed">
                   <span className="font-semibold">{t("paragraph4.brand")}</span>{" "}
                   {t("paragraph4.content")}
                 </p>
@@ -123,33 +123,21 @@ export default function About() {
               whileTap={{ scale: 0.98 }}
               onClick={() => setShowMore((v) => !v)}
               className={`flex items-center text-base font-semibold ${showMore && "mt-4"}`}
-              style={{ color: "#2A4D8A" }}
+              style={{ color: "#f3822c" }}
             >
               {showMore ? t("toggle.hide") : t("toggle.show")}
               {showMore ? (
                 <ChevronsUp
                   className="w-5 h-5 mr-2 rtl:ml-2"
-                  style={{ color: "#2A4D8A" }}
+                  style={{ color: "#f3822c" }}
                 />
               ) : (
                 <ChevronsDown
                   className="w-5 h-5 mr-2 rtl:ml-2"
-                  style={{ color: "#2A4D8A" }}
+                  style={{ color: "#f3822c" }}
                 />
               )}
             </motion.button>
-
-            <motion.div
-              variants={textItem}
-              className="mt-6 flex items-center gap-4 flex-wrap"
-            >
-              <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">
-                {t("badges.energyStandards")}
-              </Badge>
-              <Badge className="bg-green-100 text-green-800 hover:bg-green-200">
-                {t("badges.aiSupported")}
-              </Badge>
-            </motion.div>
           </motion.div>
 
           {/* Right: Feature Cards */}

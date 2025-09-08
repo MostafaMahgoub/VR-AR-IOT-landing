@@ -190,7 +190,7 @@
   },
   "consultationForm": {
     "title": "Contact Us",
-    "subtitle": "Contact us to get a free consultation and a custom offer for your station",
+    "subtitle": "Contact us to get a free consultation",
     "description": "Fill out the form and we'll contact you within 24 hours",
     "validation": {
       "nameRequired": "Name is required",
@@ -235,12 +235,12 @@
         "placeholder": "Number of tanks"
       },
       "wantDemo": {
-        "label": "Would you like to attend a demo?",
+        "label": "Service Provided",
         "placeholder": "Choose appropriate option",
         "options": {
-          "yes": "Yes",
-          "no": "No",
-          "maybe": "Maybe later"
+          "yes": "VR & AR",
+          "no": "AI & IOT",
+          "maybe": "Fuel automation"
         }
       },
       "message": {
@@ -323,6 +323,15 @@
   },
   "partners": {
     "title": "Success Partners"
+  },
+  "sectors": {
+    "title": "Sectors we serve",
+    "Contracting": "Contracting",
+    "Real Estate": "Real Estate",
+    "Tourism": "Tourism",
+    "Education Sponsorship": "Education Sponsorship",
+    "Training": "Training",
+    "Healthcare": "Healthcare"
   },
   "featuresGrid": {
     "title": "System Modules",

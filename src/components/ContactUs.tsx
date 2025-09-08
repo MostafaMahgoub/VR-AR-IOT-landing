@@ -37,15 +37,11 @@ export default function ContactUs() {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      id="contact"
-      className="py-12 md:py-16 bg-gray-50"
-    >
+    <section ref={sectionRef} id="contact" className="py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <motion.h2
-            className="text-3xl md:txt-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:txt-4xl font-bold text-white mb-4"
             variants={headerVar}
             initial="hidden"
             whileInView="show"
@@ -53,15 +49,15 @@ export default function ContactUs() {
           >
             {t("title")}
           </motion.h2>
-          <motion.p
-            className="text-xl text-gray-600"
+          {/* <motion.p
+            className="text-xl text-white"
             variants={headerVar}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
             {t("subtitle")}
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div

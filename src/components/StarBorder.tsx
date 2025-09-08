@@ -43,7 +43,7 @@ type StarBorderProps<T extends React.ElementType> =
 const sizeToPadding: Record<Size, string> = {
   sm: "px-4 py-2 text-sm",
   md: "px-5 py-2.5 text-[15px]",
-  lg: "px-8 py-1.5 text-base",
+  lg: "px-4 sm:px-8 py-1.5 text-sm sm:text-base",
 };
 
 const StarBorder = <T extends React.ElementType = "button">({
@@ -76,7 +76,7 @@ const StarBorder = <T extends React.ElementType = "button">({
         "hover:shadow-md active:translate-y-[0.5px] " +
         "dark:bg-white dark:text-[#000] dark:border-white/80"
       : // Learn More: transparent, soft border, muted text
-        "bg-transparent text-[#000] border border-[#000]/20 " +
+        "bg-white text-[#000] border border-[#000]/20 " +
         "hover:border-[#000]/30 hover:text-[#000] " +
         "dark:text-gray-400 dark:border-white/15 dark:hover:border-white/25 dark:hover:text-gray-100";
 

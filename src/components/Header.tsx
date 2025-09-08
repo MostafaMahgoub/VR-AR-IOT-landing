@@ -179,7 +179,7 @@ export default function Header() {
           <div className="lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Menu size={24} color="#2A4D8A" className="cursor-pointer" />
+                <Menu size={24} color="#f3822c" className="cursor-pointer" />
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col mt-8 gap-2">
@@ -189,8 +189,8 @@ export default function Header() {
                       href={`#${id}`}
                       className={`h-10 flex items-center px-4 rounded-md font-medium transition-colors duration-200 text-lg ${
                         activeSection === id
-                          ? "text-[#2A4D8A] bg-blue-100 font-semibold"
-                          : "text-gray-700 hover:text-[#2A4D8A] hover:bg-gray-100"
+                          ? "text-[#f3822c] bg-black font-semibold"
+                          : "text-black hover:text-[#f3822c]"
                       }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -206,14 +206,16 @@ export default function Header() {
                   <Button
                     variant="outline"
                     onClick={handleLanguageSwitch}
-                    className={`flex items-center justify-center gap-2 h-9 border-[#2A4D8A] text-[#2A4D8A] hover:bg-[#2A4D8A] hover:text-white transition-colors duration-200 text-base`}
+                    className={`flex items-center justify-center gap-2 h-9 border-black text-[#f3822c] hover:bg-[#d66f25] hover:text-black transition-colors duration-200 text-base`}
                   >
                     <Globe size={18} />
-                    <span className="font-medium">{locale.toUpperCase()}</span>
+                    <span className="font-medium">
+                      {locale === "en" ? "AR" : "EN"}
+                    </span>
                   </Button>
 
                   <Button
-                    className={`bg-[#2A4D8A] hover:bg-blue-900 text-white px-6 py-2 rounded-md font-medium ${
+                    className={`bg-[#f3822c] hover:bg-[#d66f25] text-black px-6 py-2 rounded-md font-medium ${
                       locale === "en"
                         ? "text-xs xl:text-sm"
                         : "text-sm xl:text-base"
