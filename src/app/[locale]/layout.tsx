@@ -29,7 +29,7 @@ export async function generateMetadata({
       ? "يجمع نظام الواقع الافتراضي والمعزز بين أحدث التقنيات لخلق تجارب غامرة وتفاعلية وواقعية في مجالات التعليم، التدريب، الترفيه، والأعمال. إنه يربط بين العالمين المادي والرقمي، ويمنح المستخدمين إمكانيات غير محدودة."
       : "Our VR–AR system combines cutting-edge technologies to create immersive, interactive, and realistic experiences for education, training, entertainment, and business. It bridges the gap between the physical and digital worlds, empowering users with limitless possibilities.",
     icons: {
-      icon: "/BE-Tech.svg",
+      icon: "/be-tech.svg",
     },
   };
 }

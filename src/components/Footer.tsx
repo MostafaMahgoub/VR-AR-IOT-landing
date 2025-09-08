@@ -52,7 +52,7 @@ export default function Footer() {
         >
           <motion.div variants={colVar}>
             <Image
-              src="/Be-Tech.svg"
+              src="/be-tech.svg"
               alt={t("logo.alt")}
               width={120}
               height={40}

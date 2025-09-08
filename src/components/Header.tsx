@@ -18,6 +18,11 @@ export default function Header() {
   const pathname = usePathname();
   const locale = useLocale();
 
+  // Shared styles
+  const ctaBtn = "bg-[#f3822c] hover:bg-[#d66f25] text-[#0d0d0d] font-medium";
+  const outlineBtn =
+    "border-[#f3822c] text-[#f3822c] hover:bg-[#d66f25] hover:text-[#0d0d0d]";
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -27,7 +32,6 @@ export default function Header() {
         // no-op
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -43,19 +47,17 @@ export default function Header() {
       "why-company",
       "partners",
       "contact",
+      "footer",
     ];
 
     const handleScroll = () => {
       if (isAutoScrolling) return;
-
       const scrollPosition = window.scrollY + 100;
-
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const top = element.offsetTop;
           const height = element.offsetHeight;
-
           if (scrollPosition >= top && scrollPosition < top + height) {
             setActiveSection(section);
             break;
@@ -66,7 +68,6 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isAutoScrolling]);
 
@@ -75,18 +76,10 @@ export default function Header() {
     if (section) {
       const offsetTop =
         section.getBoundingClientRect().top + window.scrollY - 40;
-
       setIsAutoScrolling(true);
       setActiveSection(id);
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-
-      setTimeout(() => {
-        setIsAutoScrolling(false);
-      }, 800);
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      setTimeout(() => setIsAutoScrolling(false), 800);
     }
   };
 
@@ -98,11 +91,7 @@ export default function Header() {
   const navItems = [
     { id: "units", label: t("nav.units") },
     { id: "about", label: t("nav.about") },
-    // { id: "standards", label: t("nav.standards") },
-    // { id: "why-us", label: t("nav.whyUs") },
-    // { id: "packages", label: t("nav.packages") },
     { id: "why-company", label: t("nav.whyCompany") },
-    // { id: "partners", label: t("nav.partners") },
     { id: "footer", label: t("nav.contact") },
   ];
 
@@ -110,6 +99,7 @@ export default function Header() {
     <header className="bg-[#0d0d0d] shadow-sm sticky top-0 z-50 w-full">
       <div className="container mx-auto p-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <div
             onClick={() => {
               setIsAutoScrolling(true);
@@ -120,7 +110,7 @@ export default function Header() {
             className="cursor-pointer"
           >
             <Image
-              src="/Be-Tech.svg"
+              src="/be-tech.svg"
               alt={t("logo.alt")}
               width={120}
               height={40}
@@ -134,7 +124,9 @@ export default function Header() {
               <a
                 key={id}
                 href={`#${id}`}
-                className={`font-semibold transition-colors duration-200 capitalize ${locale === "en" && "desktop-en"} ${
+                className={`font-semibold transition-colors duration-200 capitalize ${
+                  locale === "en" && "desktop-en"
+                } ${
                   activeSection === id
                     ? "text-[#f3822c]"
                     : "text-white hover:text-[#f3822c]"
@@ -149,9 +141,10 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
-              className={`bg-[#f3822c] hover:bg-[#d66f25] text-[#0d0d0d] px-6 py-2 rounded-md font-medium desktop ${
+              className={`${ctaBtn} px-6 py-2 rounded-md ${
                 locale === "en" ? "text-xs xl:text-sm" : "text-sm xl:text-base"
               }`}
               onClick={() => scrollToSection("contact")}
@@ -159,12 +152,11 @@ export default function Header() {
               {t("cta.requestConsultation")}
             </Button>
 
-            {/* Language Switcher */}
             <Button
               variant="outline"
               size="sm"
               onClick={handleLanguageSwitch}
-              className={`flex items-center gap-2 border-[#f3822c] text-[#f3822c] hover:bg-[#d66f25] hover:text-[#0d0d0d] transition-colors duration-200 h-9 ${
+              className={`flex items-center gap-2 h-9 ${outlineBtn} ${
                 locale === "en" ? "text-xs" : "text-sm"
               }`}
             >
@@ -175,22 +167,30 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <div className="lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Menu size={24} color="#f3822c" className="cursor-pointer" />
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <nav className="flex flex-col mt-8 gap-2">
+
+              {/* Make sheet look like the header */}
+              <SheetContent
+                side={locale === "ar" ? "left" : "right"}
+                className="w-[88vw] max-w-[400px] bg-[#0d0d0d] text-white border-l border-white/10 p-0"
+              >
+                {/* Safe-area top spacing */}
+                <div className="h-5" />
+
+                <nav className="flex flex-col gap-2 px-4 pb-6">
                   {navItems.map(({ id, label }) => (
                     <a
                       key={id}
                       href={`#${id}`}
-                      className={`h-10 flex items-center px-4 rounded-md font-medium transition-colors duration-200 text-lg ${
+                      className={`h-11 flex items-center rounded-md font-semibold transition-colors duration-200 px-4 ${
                         activeSection === id
-                          ? "text-[#f3822c] bg-black font-semibold"
-                          : "text-black hover:text-[#f3822c]"
+                          ? "text-[#f3822c] bg-white/5"
+                          : "text-white hover:text-[#f3822c]"
                       }`}
                       onClick={(e) => {
                         e.preventDefault();
@@ -202,11 +202,14 @@ export default function Header() {
                     </a>
                   ))}
 
-                  {/* Mobile Language Switcher */}
+                  {/* Language (mobile) — matches desktop outline */}
                   <Button
                     variant="outline"
-                    onClick={handleLanguageSwitch}
-                    className={`flex items-center justify-center gap-2 h-9 border-black text-[#f3822c] hover:bg-[#d66f25] hover:text-black transition-colors duration-200 text-base`}
+                    onClick={() => {
+                      handleLanguageSwitch();
+                      setOpen(false);
+                    }}
+                    className={`mt-2 ${outlineBtn} h-10 w-full flex items-center justify-center gap-2`}
                   >
                     <Globe size={18} />
                     <span className="font-medium">
@@ -214,13 +217,13 @@ export default function Header() {
                     </span>
                   </Button>
 
+                  {/* CTA (mobile) — matches desktop CTA */}
                   <Button
-                    className={`bg-[#f3822c] hover:bg-[#d66f25] text-black px-6 py-2 rounded-md font-medium ${
-                      locale === "en"
-                        ? "text-xs xl:text-sm"
-                        : "text-sm xl:text-base"
-                    }`}
-                    onClick={() => scrollToSection("contact")}
+                    className={`mt-2 ${ctaBtn} h-10 w-full`}
+                    onClick={() => {
+                      scrollToSection("contact");
+                      setOpen(false);
+                    }}
                   >
                     {t("cta.requestConsultation")}
                   </Button>

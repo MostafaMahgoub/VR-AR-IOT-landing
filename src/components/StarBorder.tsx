@@ -72,11 +72,11 @@ const StarBorder = <T extends React.ElementType = "button">({
   const presetClasses =
     variant === "solid"
       ? // Get Started: white fill, dark text
-        "bg-[#000] text-white border border-white/70 shadow-sm " +
+        "bg-[#000] text-white shadow-sm " +
         "hover:shadow-md active:translate-y-[0.5px] " +
         "dark:bg-white dark:text-[#000] dark:border-white/80"
       : // Learn More: transparent, soft border, muted text
-        "bg-white text-[#000] border border-[#000]/20 " +
+        "bg-white text-[#000] border border-[#000]/20 flex gap-2 " +
         "hover:border-[#000]/30 hover:text-[#000] " +
         "dark:text-gray-400 dark:border-white/15 dark:hover:border-white/25 dark:hover:text-gray-100";
 
