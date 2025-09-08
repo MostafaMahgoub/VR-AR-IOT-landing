@@ -18,7 +18,7 @@ export default function HeroWithFloatingImage() {
       setIsDownloading(true);
       setDownloadError(null);
 
-      const response = await fetch("/BeTechComp.pdf");
+      const response = await fetch("/Be Tech @Smart Construction Profile.pdf");
       if (!response.ok) {
         throw new Error("Failed to download the file");
       }
@@ -27,7 +27,7 @@ export default function HeroWithFloatingImage() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "BeTechComp.pdf";
+      link.download = "Be Tech Smart Construction Profile.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
