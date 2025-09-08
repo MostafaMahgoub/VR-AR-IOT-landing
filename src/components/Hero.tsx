@@ -1,9 +1,9 @@
 "use client";
 
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Download, Loader2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 import StarBorder from "./StarBorder";
 
@@ -190,7 +190,7 @@ export default function HeroWithFloatingImage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-col sm:flex-row items-center gap-0 sm:gap-[10rem]"
+          className="flex flex-col sm:flex-row items-center gap-0 sm:gap-[8rem]"
         >
           {/* Text content right */}
           <div className="text-white py-6 xl:py-0 xl:w-[50%]">
@@ -254,15 +254,27 @@ export default function HeroWithFloatingImage() {
 
           {/* Floating image left */}
           <div
-            className={`flex relative w-full lg:w-[70%] xl:w-[45%] xl:-me-[165px]`}
+            className={`flex relative w-full lg:w-[80%] xl:w-[50%] xl:-me-[165px]`}
           >
-            <DotLottieReact
-              src="https://lottie.host/2da28f6d-5857-47e2-90ee-1320adfc2c06/t3EbBi0pHY.lottie"
-              loop
-              autoplay
-              // width={"130%"}
-              style={{ width: "1000px", height: "500px" }}
-            />
+            <motion.div
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative w-full h-[600px] lg:h-[700px]"
+            >
+              <Image
+                src="/hero.png"
+                alt="Hero Image"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
