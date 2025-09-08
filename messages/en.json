@@ -74,30 +74,37 @@
     }
   },
   "whyUs": {
-    "title": "Why Choose Us",
+    "title": "About GasTech",
     "paragraph1": {
-      "prefix": "We are",
-      "brand": "Be Tech",
-      "content": "create immersive and realistic experiences using the latest virtual reality technologies. Our mission is to create applications that transport you to virtual worlds that provide impactful and engaging experiences for your audience. Whatever your industry, we will leverage virtual reality and utilize this technology in ways that exceed your expectations."
+      "content": "Smart solutions for managing fuel for all your vehicles"
     },
     "paragraph2": {
-      "content": "deliver augmented reality experiences that seamlessly integrate digital content with the real world. We develop interactive applications that enhance perception and make interacting with the environment more engaging. Through advanced technologies, we transform the way you see and interact with the world around you.",
-      "brand": "Be Tech",
-      "suffix": "application benefits from advanced technology that makes their operations smoother, more accurate, and more efficient."
+      "content": "GasTech's automation system provides concrete and contracting companies with an integrated solution for efficient and transparent fuel management, where vehicles are automatically identified when refueling and consumption is recorded directly within the system and controlled from central management, ensuring prevention of waste and manipulation, and providing accurate reports that help reduce costs and improve operational efficiency."
     },
-    "paragraph3": "We leverage virtual reality and augmented reality to create realistic training and simulation environments that enhance your skills. Through immersive experiences in a safe and controlled environment, you can practice and improve your various skills.",
+    "paragraph3": "The service is an automatic RFID system installed in company vehicles and connected to fuel pumps and tanks at fuel stations. Each vehicle has an RFID card or device that automatically identifies it when refueling, thus:",
+    "features": [
+      "Prevents any unauthorized refueling operations.",
+      "Records every refueling operation (fuel quantity, refueling time, vehicle number).",
+      "Provides company management with accurate reports on fuel consumption for each project or vehicle.",
+      "Reduces waste and prevents fuel manipulation."
+    ],
+    "paragraph4": "The service is an integrated automated system that monitors and controls fuel supply to company vehicles through an RFID card/device for each vehicle, with a technical platform for operations management and continuous technical support.",
     "cards": {
-      "innovation": {
-        "title": "Continuous Innovation",
-        "description": "We always seek new ways to improve and develop our technologies to meet the changing market needs."
+      "pumpManagement": {
+        "title": "Pump Management",
+        "description": "Complete control of pumps and displays"
       },
-      "quality": {
-        "title": "High Quality",
-        "description": "All our products and services are designed and manufactured according to the highest quality standards to ensure optimal performance."
+      "tankManagement": {
+        "title": "Tank Management",
+        "description": "Real-time fuel level monitoring"
       },
-      "partnership": {
-        "title": "Effective Partnership",
-        "description": "We consider every client a partner in success, and we work to build long-term relationships based on mutual trust."
+      "vehicleManagement": {
+        "title": "Vehicle Management",
+        "description": "Fuel requests and transportation"
+      },
+      "stationManagement": {
+        "title": "Station Management",
+        "description": "Comprehensive management of all station operations"
       }
     }
   },
