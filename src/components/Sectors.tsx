@@ -3,22 +3,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
   BookOpenCheck,
-  Building2,
   Hammer,
-  HeartPulse,
   Plane,
   Presentation,
+  Wrench,
+  Shield,
 } from "lucide-react";
 import { motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import vr2 from "/public/vr2.jpg";
-import vr5 from "/public/vr5.jpg";
-import vr6 from "/public/vr6.jpg";
-import vr8 from "/public/vr8.jpg";
-import vr11 from "/public/vr11.jpg";
-import vr12 from "/public/vr12.jpg";
+import contracting from "/public/contracting.jpeg";
+import education from "/public/education.jpeg";
+import safety from "/public/safety.jpeg";
+import tourism from "/public/tourism.jpeg";
+import engineering from "/public/engineering.jpeg";
+import training from "/public/training.jpeg";
 
 function cn(...classes: (string | undefined | false | null)[]): string {
   return classes.filter(Boolean).join(" ");
@@ -48,38 +48,38 @@ export default function Sectors() {
     {
       icon: Hammer,
       title: t("Contracting"),
-      href: "https://drive.google.com/file/d/1DMvIp59auOuzUQj6X7U8UFk3ieVfPzOq/view?usp=sharing",
-      imgSrc: vr8,
+      href: "https://drive.google.com/drive/u/0/folders/1hIWtPO485figms7tniK0eDEb_BLfb18m",
+      imgSrc: contracting,
     },
     {
-      icon: Building2,
-      title: t("Real Estate"),
-      href: "https://drive.google.com/file/d/1G-hLGQnMEsSKtTe6XSqmOCZt4cOhLEAe/view?usp=sharing",
-      imgSrc: vr2,
+      icon: BookOpenCheck,
+      title: t("Education"),
+      href: "https://drive.google.com/drive/u/0/folders/1kuVR3yqKAtWCT2eQmp8YiT2SYR8f8CZQ",
+      imgSrc: education,
+    },
+    {
+      icon: Shield,
+      title: t("Safety"),
+      href: "https://drive.google.com/drive/u/0/folders/1PhGMrIoqgqT7HDDDFf2cP4_3wHU5G2jZ",
+      imgSrc: safety,
     },
     {
       icon: Plane,
       title: t("Tourism"),
-      href: "https://drive.google.com/file/d/1M67ty2OdbsqwKM131LiiUnq8N8ZtVG2P/view?usp=sharing",
-      imgSrc: vr11,
+      href: "https://drive.google.com/drive/u/0/folders/1sWNR_CoXlvauwOPy1er_In2YgXe7M7-q",
+      imgSrc: tourism,
     },
     {
-      icon: BookOpenCheck,
-      title: t("Education Sponsorship"),
-      href: "https://drive.google.com/file/d/1-v8DVvnSiv04dc-oo-Rg1St7F5pJhUFJ/view?usp=sharing",
-      imgSrc: vr12,
+      icon: Wrench,
+      title: t("Engineering"),
+      href: "https://drive.google.com/drive/u/0/folders/1um6ICDWwELYMko7MtbWe2joLjOKK50uQ",
+      imgSrc: engineering,
     },
     {
       icon: Presentation,
       title: t("Training"),
-      href: "https://drive.google.com/file/d/1qvB3Rv1yOUxdIJ1VwzwIsVWQn_ZtYDSA/view?usp=sharing",
-      imgSrc: vr5,
-    },
-    {
-      icon: HeartPulse,
-      title: t("Healthcare"),
-      href: "https://drive.google.com/file/d/1_1g0ESyrtkFX6FdT4pH8TZavWTIM-2aG/view?usp=sharing",
-      imgSrc: vr6,
+      href: "https://drive.google.com/drive/u/0/folders/1aGgAyLW1GsLpc8KKXrAWUvBRrJ5U8E6Q",
+      imgSrc: training,
     },
   ];
 

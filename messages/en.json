@@ -326,12 +326,12 @@
   },
   "sectors": {
     "title": "أضغط هنا لمشاهدة أمثلة علي التدريب في قطاع المقاولات من خلال الواقع الافتراضي (VR)",
-    "Contracting": "Contracting",
-    "Real Estate": "Real Estate",
-    "Tourism": "Tourism",
-    "Education Sponsorship": "Education Sponsorship",
-    "Training": "Training",
-    "Healthcare": "Healthcare"
+    "Contracting": "Contracting Sector",
+    "Education": "Education & Universities Sector",
+    "Safety": "Security & Safety Sector",
+    "Tourism": "Tourism Sector",
+    "Engineering": "Engineering Sector",
+    "Training": "Training Sector"
   },
   "featuresGrid": {
     "title": "System Modules",
