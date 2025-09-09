@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import StarBorder from "./StarBorder";
+import heroImg from "/public/hero-img.svg";
 
 export default function HeroWithFloatingImage() {
   const t = useTranslations("hero");
@@ -190,7 +191,7 @@ export default function HeroWithFloatingImage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="flex flex-col sm:flex-row items-center gap-0 sm:gap-[8rem]"
+          className="flex flex-col sm:flex-row items-center gap-0 sm:gap-[5rem]"
         >
           {/* Text content right */}
           <div className="text-white py-6 xl:py-0 xl:w-[50%]">
@@ -259,22 +260,23 @@ export default function HeroWithFloatingImage() {
             className={`flex relative w-full lg:w-[80%] xl:w-[50%] xl:-me-[165px]`}
           >
             <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              // animate={{
+              //   y: [0, -20, 0],
+              // }}
+              // transition={{
+              //   duration: 3,
+              //   repeat: Infinity,
+              //   ease: "easeInOut",
+              // }}
               className="relative w-full h-[600px] lg:h-[700px]"
             >
               <Image
-                src="/hero.png"
+                src={heroImg}
                 alt="Hero Image"
                 fill
-                className="object-contain"
+                className="object-contain !w-[590px] !h-[600px]"
                 priority
+                
               />
             </motion.div>
           </div>
