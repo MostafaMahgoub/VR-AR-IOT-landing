@@ -89,7 +89,14 @@ export default function About() {
                 {t("paragraph3.challengeContent")}
               </p>
             </div>
-
+            <div>
+              <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                {t("paragraph3.solution")}
+              </h5>
+              <p className="text-white leading-relaxed">
+                {t("paragraph3.solutionContent")}
+              </p>
+            </div>
             {/* Expandable content */}
             <motion.div
               initial={false}
@@ -106,15 +113,6 @@ export default function About() {
               <div className="space-y-6">
                 <div>
                   <div className="space-y-4">
-                    <div>
-                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
-                        {t("paragraph3.solution")}
-                      </h5>
-                      <p className="text-white leading-relaxed">
-                        {t("paragraph3.solutionContent")}
-                      </p>
-                    </div>
-
                     <div>
                       <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
                         {t("paragraph3.impact")}
@@ -151,7 +149,7 @@ export default function About() {
             <motion.button
               whileTap={{ scale: 0.98 }}
               onClick={() => setShowMore((v) => !v)}
-              className={`flex items-center text-base font-semibold ${showMore && "mt-4"}`}
+              className={`flex items-center text-base font-semibold mt-4`}
               style={{ color: "#f3822c" }}
             >
               {showMore ? t("toggle.hide") : t("toggle.show")}

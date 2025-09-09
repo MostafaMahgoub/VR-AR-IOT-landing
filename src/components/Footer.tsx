@@ -51,13 +51,15 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div variants={colVar}>
-            <Image
-              src={"/be-tech.svg"}
-              alt={t("logo.alt")}
-              width={120}
-              height={40}
-              className="h-10 w-auto mb-4"
-            />
+            <Link href="https://betech.com.sa" target="_blank">
+              <Image
+                src={"/be-tech.svg"}
+                alt={t("logo.alt")}
+                width={120}
+                height={40}
+                className="h-10 w-auto mb-4"
+              />
+            </Link>
             <p className="text-[#f3822c] mb-4">{t("description")}</p>
           </motion.div>
 

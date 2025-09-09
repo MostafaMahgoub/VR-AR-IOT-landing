@@ -274,9 +274,8 @@ export default function HeroWithFloatingImage() {
                 src={heroImg}
                 alt="Hero Image"
                 fill
-                className="object-contain !w-[590px] !h-[600px]"
+                className="object-contain !w-[590px] "
                 priority
-                
               />
             </motion.div>
           </div>
