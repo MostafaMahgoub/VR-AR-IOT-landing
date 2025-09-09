@@ -268,12 +268,11 @@ export default function HeroWithFloatingImage() {
               //   repeat: Infinity,
               //   ease: "easeInOut",
               // }}
-              className="relative w-full h-[600px] lg:h-[700px]"
+              className="relative w-full h-[450px] lg:h-[700px] flex items-start justify-end"
             >
               <Image
                 src={heroImg}
                 alt="Hero Image"
-                fill
                 className="object-contain !w-[590px] "
                 priority
               />
