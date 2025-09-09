@@ -3,7 +3,7 @@ import { useLocale } from "next-intl";
 import { Link } from "@/navigations";
 import { Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = "966562704007";
+const WHATSAPP_NUMBER = "966569765744";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const WhatsAppIconWithTooltip = () => {

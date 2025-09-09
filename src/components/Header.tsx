@@ -7,6 +7,7 @@ import { Menu, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/navigations";
+import Link from "next/link";
 
 export default function Header() {
   const t = useTranslations("header");
@@ -100,13 +101,15 @@ export default function Header() {
       <div className="container mx-auto p-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div
-            onClick={() => {
-              setIsAutoScrolling(true);
-              setActiveSection("");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              setTimeout(() => setIsAutoScrolling(false), 800);
-            }}
+          <Link
+            href="https://betech.com.sa"
+            target="_blank"
+            // onClick={() => {
+            //   setIsAutoScrolling(true);
+            //   setActiveSection("");
+            //   window.scrollTo({ top: 0, behavior: "smooth" });
+            //   setTimeout(() => setIsAutoScrolling(false), 800);
+            // }}
             className="cursor-pointer"
           >
             <Image
@@ -116,7 +119,7 @@ export default function Header() {
               height={40}
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-3 xl:gap-10 justify-center flex-1 relative desktop">

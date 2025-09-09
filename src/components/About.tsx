@@ -19,14 +19,7 @@ const textContainer: Variants = {
   },
 };
 
-const textItem: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-  },
-};
+
 
 const cardsContainer: Variants = {
   hidden: { opacity: 0 },
@@ -62,7 +55,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <motion.h2
+            {/* <motion.h2
               variants={textItem}
               className="text-4xl font-bold text-white mb-6"
             >
@@ -81,7 +74,21 @@ export default function About() {
               className="text-lg text-white mb-6 leading-relaxed"
             >
               {t("paragraph2.content")}
-            </motion.p>
+            </motion.p> */}
+            <h3 className="text-3xl font-bold text-white mb-6">
+              {t("paragraph3.title")}
+            </h3>
+            <h4 className="text-xl font-semibold text-white mb-3">
+              {t("paragraph3.subtitle")}
+            </h4>
+            <div>
+              <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
+                {t("paragraph3.challenge")}
+              </h5>
+              <p className="text-white leading-relaxed">
+                {t("paragraph3.challengeContent")}
+              </p>
+            </div>
 
             {/* Expandable content */}
             <motion.div
@@ -98,23 +105,7 @@ export default function About() {
             >
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#f3822c] mb-4">
-                    {t("paragraph3.title")}
-                  </h3>
-                  <h4 className="text-xl font-semibold text-white mb-3">
-                    {t("paragraph3.subtitle")}
-                  </h4>
-
                   <div className="space-y-4">
-                    <div>
-                      <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
-                        {t("paragraph3.challenge")}
-                      </h5>
-                      <p className="text-white leading-relaxed">
-                        {t("paragraph3.challengeContent")}
-                      </p>
-                    </div>
-
                     <div>
                       <h5 className="text-lg font-semibold text-[#f3822c] mb-2">
                         {t("paragraph3.solution")}
